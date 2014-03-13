@@ -6,7 +6,7 @@
   out: "js/main.built.js",
   include : 'main',
 
-  optimize: "uglify",
+  optimize: "none",
 
   uglify: {
     toplevel: true,
