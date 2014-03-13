@@ -2044,6 +2044,7 @@ var requirejs, require, define;
         //where the module name is not known until the script onload event
         //occurs. If no context, use the global queue, and get it processed
         //in the onscript load callback.
+        console.log('name', name, 'context', context);
         (context ? context.defQueue : globalDefQueue).push([name, deps, callback]);
     };
 

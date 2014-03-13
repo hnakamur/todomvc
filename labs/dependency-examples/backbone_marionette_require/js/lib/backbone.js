@@ -5,13 +5,17 @@
 //     For all details and documentation:
 //     http://backbonejs.org
 
+console.log('backbone.js #1');
 (function(root, factory) {
+  console.log('backbone.js #2');
 
   // Set up Backbone appropriately for the environment. Start with AMD.
   if (typeof define === 'function' && define.amd) {
+    console.log('backbone.js #3');
     define(['underscore', 'jquery', 'exports'], function(_, $, exports) {
       // Export global even in AMD case in case this script is loaded with
       // others that may still expect a global Backbone.
+      console.log('backbone.js #4');
       root.Backbone = factory(root, exports, _, $);
     });
 
@@ -24,8 +28,10 @@
   } else {
     root.Backbone = factory(root, {}, root._, (root.jQuery || root.Zepto || root.ender || root.$));
   }
+  console.log('backbone.js #5');
 
 }(this, function(root, Backbone, _, $) {
+  console.log('backbone.js #6');
 
   // Initial Setup
   // -------------
